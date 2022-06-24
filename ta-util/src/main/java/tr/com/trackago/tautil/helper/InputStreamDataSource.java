@@ -1,33 +1,33 @@
 package tr.com.trackago.tautil.helper;
 
-import javax.activation.DataSource;
+//import javax.activation.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class InputStreamDataSource implements DataSource {
+public class InputStreamDataSource {//implements DataSource {
     private InputStream inputStream;
 
     public InputStreamDataSource(InputStream inputStream) {
         this.inputStream = inputStream;
     }
 
-    @Override
+//    @Override
     public InputStream getInputStream() throws IOException {
         return inputStream;
     }
 
-    @Override
+//    @Override
     public OutputStream getOutputStream() throws IOException {
         throw new UnsupportedOperationException("Not implemented");
     }
 
-    @Override
+//    @Override
     public String getContentType() {
         return "*/*";
     }
 
-    @Override
+//    @Override
     public String getName() {
         return "InputStreamDataSource";
     }
